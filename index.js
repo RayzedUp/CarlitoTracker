@@ -10,6 +10,7 @@ app.get("/" , (req, res) => {
 })
 
 const Discord = require("discord.js");
+const keep_alive = require('./keep_alive.js')
 const client = new Discord.Client({ intents: ["Guilds", "GuildMessages", "MessageContent"]})
 
 client.on("messageCreate", message => {
